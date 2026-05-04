@@ -1,0 +1,105 @@
+
+.portfolio-wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(red);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.sidebar {
+  background: black;
+  color: white;
+  padding: 40px 20px;
+  position: fixed;
+  width: 280px;
+  height: 100vh;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+strong{
+  color: red;
+}
+
+.sidebar nav a {
+  color: #888;
+  text-decoration: none;
+  display: block;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover { color: white; }
+
+.main-content {
+  margin-left: 280px;
+  padding: 40px;
+  background: #fcfcfc;
+}
+
+
+.app-header h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #444;
+}
+
+.form-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
+.project-item {
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.delete-icon {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.add-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .portfolio-wrapper { grid-template-columns: 1fr; }
+  .sidebar { position: static; width: 100%; height: auto; }
+  .main-content { margin-left: 0; }
+}
